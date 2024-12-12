@@ -14,3 +14,25 @@
 .card > p , .card > h2{
   margin: 0;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+  font-size: 32px;
+}
+.btn{
+  font-size: 24px;
+  background: blueviolet;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 24px 36px;
+  border-radius: 36px;
+}
