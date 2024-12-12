@@ -1,0 +1,16 @@
+.card{
+  border: 1px solid black;
+  width: 160px;
+  height: 90px;
+  background-color: blueviolet;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px;
+}
+
+.card > p , .card > h2{
+  margin: 0;
+}
