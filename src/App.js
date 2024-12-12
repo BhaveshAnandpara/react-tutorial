@@ -1,27 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import Card from './component/Card';
-import { useState } from 'react';
-import NameCard from './component/NameCard';
-import Agecard from './component/Agecard';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [name, setname] = useState("Bhavesh");
+  const [age, setage] = useState(22);
+  const [city, setcity] = useState("");
 
-  const [name, setName] = useState("Bhavesh")   //This is useState so whenever this value changes the component that is using this value as prop will also RERENDER
-  const [age, setAge] = useState(22)   
-  let city = "Wardha"   //This is not a useState so even if this value changes the component will not RENDER.
+  const print = () => console.log(name, age, city);
 
   return (
     <>
-        <input type='text' placeholder='Enter Name here'   onChange={(e)=>setName(e.target.value)} />
-        <input type='number' placeholder='Enter Age here'  onChange={(e)=>setAge(e.target.value)}  />
-        <input type='text' placeholder='Enter city here'   onChange={(e)=>{ city=e.target.value } } />
+      <input
+        type="text"
+        placeholder="Enter Name"
+        onChange={(e) => setname(e.target.value)}
+      ></input>
+      <input
+        type="number"
+        placeholder="Enter age"
+        onChange={(e) => setage(e.target.value)}
+      ></input>
+      <input
+        type="text"
+        placeholder="Enter city"
+        onChange={(e) => setcity(e.target.value)}
+      ></input>
 
-        <NameCard name={name}/>
-        <Agecard age={age} />
-        <NameCard name={city}/>
+      <button onClick={print}>Submit</button>
     </>
-  )
+  );
 }
 
 export default App;
